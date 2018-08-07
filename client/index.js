@@ -5,6 +5,7 @@ import { ApolloProvider } from 'react-apollo';
 import { Router, hashHistory, Route, IndexRoute } from 'react-router';
 
 import App from './components/App';
+import LoginForm from './components/LoginForm';
 
 // custom network interface to include auth cookies along with request to server
 const networkInterface = createNetworkInterface({
@@ -24,6 +25,7 @@ const Root = () => {
     <ApolloProvider client={client}>
       <Router history={hashHistory}>
         <Route path="/" component={App} />
+        <Route path="login" component={LoginForm} />
       </Router>
     </ApolloProvider>
   );

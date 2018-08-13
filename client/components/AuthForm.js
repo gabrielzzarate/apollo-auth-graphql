@@ -17,6 +17,8 @@ class AuthForm extends Component {
   }
 
   render() {
+    const { errors } = this.props;
+
     return (
       <div className="row">
         <form onSubmit={this.onSubmit.bind(this)} className="col s6">
@@ -32,6 +34,9 @@ class AuthForm extends Component {
               type="password"
               value={this.state.password}
               onChange={ e => this.setState({ password: e.target.value }) }/>
+          </div>
+          <div className="errors">
+            { errors.map(error => <div key={error}>{error}</div>)}
           </div>
           <button className="btn">Submit</button>
         </form>

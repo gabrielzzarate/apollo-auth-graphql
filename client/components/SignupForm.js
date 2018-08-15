@@ -5,7 +5,7 @@ import { graphql } from 'react-apollo';
 import query from '../queries/CurrentUser';
 
 class SignupForm extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = { errors: [] };
@@ -26,7 +26,7 @@ class SignupForm extends Component {
       <div>
         <h3>Signup</h3>
         <AuthForm 
-          errors={this.state.errors} 
+          errors={ this.state.errors } 
           onSubmit={this.onSubmit.bind(this)} 
         />
       </div>
